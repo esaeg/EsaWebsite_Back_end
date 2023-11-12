@@ -15,9 +15,10 @@
     composer install
 
 ### 5- Create .env file from .env.environment file:
-    `nano .env.example` and save it with *.env*
+    nano .env.example
+and save it with *.env*
 
-update the database connection information in the .env file with your database credentials
+then, update the database connection information in the .env file with your database credentials
 
     DB_DATABASE=esa_website
     DB_USERNAME=root
@@ -28,6 +29,10 @@ update the database connection information in the .env file with your database c
 
 ### 7- Run seed to add data to database
     php artisan dashboard:seed
+
+just after you see `Seeding PaymentSeeder ...` you can cancel the process by `ctrl + c`
+
+there is a problem ending seeder form dashboard package
 
 ### 8- Generate Key and clear cache
     php artisan key:generate
@@ -48,7 +53,7 @@ update the database connection information in the .env file with your database c
     email: admin@admin.com
     password: 12345678
 
-## Working on git
+## Working with git
 *   Create a new branch from dev branch
     *   git checkout dev
     *   git pull

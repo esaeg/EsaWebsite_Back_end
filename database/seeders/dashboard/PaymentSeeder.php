@@ -17,13 +17,13 @@ class PaymentSeeder extends Seeder
         /********************
          * insert payments in DB
          *******************/
-        //$paymentNames = ['paypal', 'visa Card', 'master Card','Cash On Delivery '];
-        //foreach ($paymentNames as $paymentName) {
-        //    Payment::updateOrCreate(
-        //        [
-        //            'name' => $paymentName,
-        //        ]
-        //    );
-        //}
+        $paymentNames = ['paypal', 'visa Card', 'master Card','Cash On Delivery '];
+        foreach ($paymentNames as $paymentName) {
+            Payment::updateOrCreate(
+                [
+                    'name' => $paymentName,
+                ]
+            );
+        }
     }
 }
