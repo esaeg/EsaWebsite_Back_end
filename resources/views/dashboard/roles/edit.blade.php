@@ -18,7 +18,7 @@
 @section('custoJs')
 
     <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
-    <script>
+    <script type="module">
     //hide popup window after ajax call
     function hide_popup()
     {

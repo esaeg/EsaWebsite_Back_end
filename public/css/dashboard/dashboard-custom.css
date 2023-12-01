@@ -185,4 +185,8 @@ ul.treeview-menu li.active {
 {
     max-width:100px;
 }
+.edit, .delete{
+    margin: 5px;
+    padding: 5px;
+}
 

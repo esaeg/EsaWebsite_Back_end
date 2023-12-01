@@ -7,7 +7,7 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    @vite(['resources/sass/dashboard.scss','resources/js/app.js'])
+    @vite(['resources/js/app.js'])
     <link href="{{ asset("css/dashboard/dashboard-custom.css")}}" rel="stylesheet" type="text/css"/>
     <!-- icon -->
     <link rel="icon" href="{{ asset('img/dashboard/favicon.png') }}">
@@ -42,19 +42,11 @@
     <!-- Footer -->
     @include('dashboard.footer')
 
-
-    {{--<script src="{{ asset ("js/dashboard/dashboard.js") }}"></script>--}}
-    <!-- REQUIRED JS SCRIPTS -->
-    <script src="{{ asset ("js/dashboard/jquery.min.js") }}"></script>
-    <script src="{{ asset ("js/dashboard/jquery-ui.min.js") }}"></script>
-
-
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
+    <script type="module">
+    //$.widget.bridge('uibutton', $.ui.button)
     </script>
-    {{--    <script src="{{ asset ("/dashboard-asset/js/main.js") }}"></script>--}}
 
-    @yield('custoJs')
+    @yield('customJs')
 </div>
 @include('dashboard.components.customjs.adminTemplateCustomJs')
 

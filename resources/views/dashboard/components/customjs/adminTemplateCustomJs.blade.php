@@ -1,5 +1,5 @@
 <!-- Initialize Scripts -->
-<script type="text/javascript">
+<script type="module">
     $(document).ready(function () {
         $(".treeview-menu").each(function () {
             if ($(this).children().hasClass('active-submenu')) {
@@ -12,11 +12,11 @@
 </script>
 
 <!-- Initialize Delete Action -->
-<script type="text/javascript">
+<script type="module">
     $(document).ready(function () {
 
         $('.delete').click(function () {
-            var id = $(this).data('id');
+            let id = $(this).data('id');
             $(".modal-body #row_id").val(id);
 
             $(this).parent().parent().addClass('about_to_delete');
@@ -29,11 +29,11 @@
 
         $('.delete_row').click(function () {
 
-            var id = $('#row_id').val();
-            var totl_result = $('#row_id').val();
-            var url = $('#path').val() + id;
-            // alert(url);
-            // return ;
+            let id = $('#row_id').val();
+            let total_result = $('#totalResult').text();
+            let url = $('#path').val() + id;
+
+            //return false;
             $.ajax({
                 url: url,
                 type: 'DELETE',
@@ -43,8 +43,7 @@
                 success: function (success_array) {
                     $("table").find(".about_to_delete").addClass('destroy_tr');
                     setTimeout(remove_tr, 1500);
-                    $total = $("#totalResult").text();
-                    $("#totalResult").text($total - 1);
+                    $("#totalResult").text(total_result - 1);
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                 }
@@ -61,16 +60,16 @@
 </script>
 
 <!-- Initialize Toggle Action -->
-<script type="text/javascript">
+<script type="module">
     $(document).ready(function () {
 
         $('.toggle').click(function (e) {
 
-            var id = $(this).attr("data-id");
-            var col = $(this).attr("data-col");
-            var table = $(this).attr("data-table");
-            var pk = $(this).attr("data-pk");
-            var path = $('body').data('base-path');
+            let id = $(this).attr("data-id");
+            let col = $(this).attr("data-col");
+            let table = $(this).attr("data-table");
+            let pk = $(this).attr("data-pk");
+            let path = $('body').data('base-path');
 
             $.ajax({
                 url: path + "/common/toggle_active",
@@ -94,22 +93,22 @@
 
 
 <!-- Initialize Change Password -->
-<script type="text/javascript">
+<script type="module">
     $(document).ready(function () {
 
         $('.popup').click(function () {
             $(".field_error").hide();
             $("#password").val("");
             $("#confirm_password").val("");
-            var id = $(this).data('id');
-            var email = $(this).data('email');
+            let id = $(this).data('id');
+            let email = $(this).data('email');
             $(".modal-body #row_id").val(id);
             $(".modal-body #email").html(email);
             //$(this).parent().parent().addClass('about_to_delete');
         });
 
         $('.popup_validate').click(function () {
-            var id = $(this).data('id');
+            let id = $(this).data('id');
             $(".modal-body #user_id").val(id);
         });
 
@@ -125,12 +124,12 @@
         // Change Password Via Ajax
         $('.submit_change_password').click(function () {
             $(".field_error").hide();
-            var id = $('#row_id').val();
-            // var path = $('body').data('base-path');
-            var password = $('#password').val();
-            var confirm_password = $('#confirm_password').val();
+            let id = $('#row_id').val();
+            // let path = $('body').data('base-path');
+            let password = $('#password').val();
+            let confirm_password = $('#confirm_password').val();
 
-            var state = Boolean();
+            let state = Boolean();
             state = true;
 
             if (password === "") {
@@ -179,11 +178,11 @@
         //Validate Code Via Ajax
         $('.submit_validate_account').click(function () {
             $(".field_error").hide();
-            var id = $('#user_id').val();
-            var path = $('body').data('base-path');
-            var code = $('#code').val();
+            let id = $('#user_id').val();
+            let path = $('body').data('base-path');
+            let code = $('#code').val();
 
-            var state = Boolean();
+            let state = Boolean();
             state = true;
 
             if (code === "") {
@@ -227,7 +226,7 @@
     </script>;
 @endif
 <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
-<script>
+<script type="module">
     $(document).ready(function () {
         try {
             CKEDITOR.replace('editor');

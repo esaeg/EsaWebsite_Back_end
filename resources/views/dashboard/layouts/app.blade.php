@@ -14,7 +14,7 @@
 
 
     <!-- Styles -->
-    @vite(['resources/sass/dashboard.scss'])
+    @vite(['resources/js/app.js'])
 </head>
 <body>
 <div id="app">
