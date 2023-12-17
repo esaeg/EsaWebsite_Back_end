@@ -37,6 +37,15 @@
                         </a>
                     </li>
                 @endcan
+                @can('event-view')
+                    <li class="nav-item">
+                        <a href="{{ url('/dashboard/events') }}"
+                           class="nav-link {{ Request::segment(2) == 'events' ? 'active' : '' }}">
+                            <i class="fab fa-product-hunt"></i>
+                            <p> Events </p>
+                        </a>
+                    </li>
+                @endcan
                 <li
                         class="nav-item {{ Request::segment(2) == 'admins' || Request::segment(2) == 'roles' || Request::segment(2) == 'permissions' ? 'menu-is-opening menu-open' : '' }}">
                     <a href="#" class="nav-link">

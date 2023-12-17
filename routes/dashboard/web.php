@@ -7,6 +7,7 @@ use App\Http\Controllers\dashboard\Auth\LoginController;
 use App\Http\Controllers\dashboard\Auth\ResetPasswordController;
 use App\Http\Controllers\dashboard\BackendProductController;
 use App\Http\Controllers\dashboard\DashboardHomeController;
+use App\Http\Controllers\dashboard\EventController;
 use App\Http\Controllers\dashboard\PermissionController;
 use App\Http\Controllers\dashboard\RoleController;
 use Illuminate\Support\Facades\Route;
@@ -44,6 +45,7 @@ Route::prefix('dashboard')->group(function () {
         Route::resource('permissions', PermissionController::class);
 
         Route::resource('backendproducts', BackendProductController::class);
+        Route::resource('events', EventController::class);
 
     });
 });
