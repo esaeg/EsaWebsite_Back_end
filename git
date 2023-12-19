@@ -1,0 +1,26 @@
+[33mcommit 9b21a8c4214c29c35937e60658f8ab5942f0d8fe[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m)[m
+Author: Ahmed Bermawy <ahmed.bermawy@strix.net>
+Date:   Fri Dec 1 14:02:34 2023 +0200
+
+    Fix the issue of vite.js
+    fix the issue of side menu toggle
+    fix issue of delete button
+    add event controller dashboard page
+
+[33mcommit 1597a79ce8f656d5e021471ddb6daf84bb8d0cbc[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ahmed Bermawy <ahmed.bermawy@strix.net>
+Date:   Sun Nov 12 21:56:34 2023 +0200
+
+    Update README.md file
+
+[33mcommit e27ae82cf9b4afd54748a44c2d2b0e385ba34d73[m
+Author: Ahmed Bermawy <ahmed.bermawy@strix.net>
+Date:   Sun Nov 12 21:38:08 2023 +0200
+
+    update some set up
+
+[33mcommit dec50d5b84e7493602c3ba71c7f861dad222058e[m
+Author: Ahmed Bermawy <ahmed.bermawy@strix.net>
+Date:   Sun Nov 12 21:11:28 2023 +0200
+
+    first commit

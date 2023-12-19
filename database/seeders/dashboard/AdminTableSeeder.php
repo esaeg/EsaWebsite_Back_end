@@ -29,7 +29,7 @@ class AdminTableSeeder extends Seeder
         ];
         /** create admin */
         $admin = Admin::where('email', $adminData['email'])->first();
-
+        
         if ($admin !== null) {
             $admin->update($adminData);
         } else {
