@@ -22,8 +22,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::prefix("user")->group(function(){
-    Route::get("/", [UserController::class, "index"]);
-    // Route::get("/login", [UserController::class, "show"]);
-    Route::post("/signup", [UserController::class, "create"])->middleware("guest");
+    // Route::get("/", [UserController::class, "index"]);
+    Route::post("/login", [UserController::class, "login"]);
+    Route::post("/signup", [UserController::class, "store"]);
     Route::get("/{id}", [UserController::class, "show"]);
 });

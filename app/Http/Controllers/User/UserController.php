@@ -18,6 +18,21 @@ class UserController extends Controller
         return "good";
     }
 
+    public function login(Request $request){
+        $fileds = $request->validate([
+            "email" => "required|email",
+            "password" => "required"
+        ]);
+        if ( ! User::where("email", $request['email'])->exists() ){
+            return "email is not here";
+        }elseif (  ! User::where("email", $request['email'])->where("password", $request['password'])->exists() ){
+            return "Password is not true";
+        }
+        else{
+            return true;
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,16 +40,7 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        $fiesds = $request->validate([
-            "name" => "required",
-            "email" => "required",
-            "password" => "required"
-        ]);
-
-        $user = User::create($fiesds);
-
-        return $user;
-        
+        //
     }
 
     /**
@@ -45,7 +51,15 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fiesds = $request->validate([
+            "name" => "required",
+            "email" => "required|email|unique:users",
+            "password" => "required"
+        ]);
+
+        $user = User::create($fiesds);
+
+        return $user;
     }
 
     /**
