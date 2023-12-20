@@ -44,10 +44,10 @@ there is a problem ending seeder form dashboard package
 ### 10- Compile and minimize scss & js files by vite
     npm run dev
 
-### 11- start laravel server
+### 11- Start laravel server
     php artisan serve
 
-### 12- dashboard login
+### 12- Dashboard login
     http://127.0.0.1:8000/dashboard/login
 
     email: admin@admin.com
