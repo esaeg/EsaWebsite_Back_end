@@ -30,4 +30,3 @@ jobs:
       #run: php artisan migrate --force
       - name: run php artisan optimize clear
         run: php artisan optimize:clear
-
