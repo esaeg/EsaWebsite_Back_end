@@ -68,4 +68,4 @@ there is a problem ending seeder form dashboard package
     *   git pull
 
 ## Deploying to server
-    try to push dev branch to server
+    try to push dev branch to server 
