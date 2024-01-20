@@ -25,9 +25,11 @@ jobs:
           args: '-o ConnectTimeout=5'
 
       - name: run composer install
-        run: composer install --no-dev --optimize-autoloader
-      #- name: run php artisan migrate
-      #run: php artisan migrate --force
+        run: composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
       - name: run php artisan optimize clear
         run: php artisan optimize:clear
+      - name: Compile npm assets
+        run: npm run prod
+      - name: run php artisan migrate
+        run: php artisan migrate --force
 
