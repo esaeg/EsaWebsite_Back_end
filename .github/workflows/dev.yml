@@ -19,7 +19,7 @@ jobs:
           remote_user: ${{secrets.USER}}
           remote_host: ${{secrets.HOST}}
           remote_port: ${{secrets.PORT}}
-          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          #remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
           remote_path: ${{secrets.PATH}}
 
           args: '-o ConnectTimeout=5'
