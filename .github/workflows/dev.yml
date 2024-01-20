@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Copy Known Hosts File
+        run: echo "$KNOWN_HOSTS" > $HOME/.ssh/known_hosts
       - name: Deploy to live server
         uses: burnett01/rsync-deployments@5.1
         with:
