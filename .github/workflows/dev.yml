@@ -31,5 +31,5 @@ jobs:
 #      - name: Compile npm assets
 #        run: npm run prod
       - name: run php artisan migrate
-        run: php artisan migrate
+        run: php artisan migrate --force
 
