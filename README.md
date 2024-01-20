@@ -68,4 +68,5 @@ there is a problem ending seeder form dashboard package
     *   git pull
 
 ## Deploying to server
-    try to push dev branch to server 
+
+* dev branch will auto deploy to dev server under this domain: https://stage.esaeg.org/
