@@ -66,3 +66,5 @@ there is a problem ending seeder form dashboard package
 *  After merging your branch to dev branch
     *   git checkout dev
     *   git pull
+
+## Deploying to server
